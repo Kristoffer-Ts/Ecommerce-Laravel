@@ -1,0 +1,185 @@
+/* css baru */
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@400;700&display=swap');
+
+*{
+    font-family: 'Quicksand', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+    border: none;
+    text-decoration: none;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+.jumbotron {
+    line-height: 70px;
+    display: flex;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 9999;
+    padding: 1.4rem 7%;
+}
+
+.jumbotron h2 {
+    font-weight: 700;
+    margin-top: 0.7rem;
+}
+
+.navibar {
+    font-weight: 700;
+}
+
+.offcanvas-body a {
+    text-decoration: none;
+    color: white;
+    font-size: 18px;
+    letter-spacing: 2px;
+    display: list-item;
+    padding: 20px;
+    margin-left: 20px;
+}
+
+.offcanvas a:hover {
+    background-color: white;
+    color: #2e5eec;
+    transition: 0.5s;
+    letter-spacing: 4px;
+    text-transform: inherit;
+    padding: 20px;
+}
+
+.wrapper {
+    width: 1100px;
+    margin: auto;
+    position: relative;
+}
+
+.menu {
+    float: right;
+}
+
+section {
+    margin: auto;
+    display: flex;
+    margin-bottom: 50px;
+}
+
+.kolom {
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+.kolom .deskripsi {
+    font-size: 20px;
+    font-weight: bold;
+    font-family: 'comic sans ms';
+    color: #2e5eec;
+}
+
+main h2 {
+    font-family: 'comic sans ms';
+    font-weight: 800;
+    font-size: 45px;
+    margin-bottom: 20px;
+    color: #2e5eec;
+    width: 100%;
+    line-height: 50px;
+}
+
+a.button-link {
+    background: #2e5eec;
+    border-radius: 20px;
+    margin-top: 20px;
+    padding: 15px 20px 15px 20px;
+    color: #FFFFFF;
+    cursor: pointer;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+a.button-link:hover {
+    background: #fff;
+    text-decoration: none;
+    color: #2e5eec;
+    border-style: dashed;
+    border-color: #2e5eec;
+}
+
+p {
+    margin: 10px 0px 10px 0px;
+    padding: 10px 0px 10px 0px;
+}
+
+/* Support */
+.support-card {
+    text-align: center;
+    width: 100%;
+}
+
+.partner-list {
+    width: 100%;
+    position: relative;
+}
+
+.partner-list img{
+    margin: 1rem;
+}
+
+/* Media */
+/* Laptop */
+@media (max-width: 1366px) {
+    html {
+    font-size: 75%;
+    }
+}
+
+/* Tablet */
+@media (max-width: 768px) {
+    html {
+    font-size: 62.5%;
+    }
+
+    .login-box {
+        width: 400px;
+        height: 350px;
+    }
+
+    .wrapper {
+        width: 90%;
+    }
+
+    section {
+        display: block;
+    }
+
+    section img {
+        display: block;
+        width: 100%;
+        height: auto;
+    }
+
+    .kartu-tutor {
+        width: 50%;
+    }
+
+    .kartu-partner {
+        width: 50%;
+    }
+}
+
+/* Mobile Phone */
+@media (max-width: 450px) {
+    html {
+        font-size: 55%;
+    }
+
+    .login-box {
+        width: 300px;
+        height: 330px;
+    }
+}

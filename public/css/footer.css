@@ -1,0 +1,73 @@
+/* Footer */
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@400;700&display=swap');
+
+*{
+    font-family: 'Quicksand', sans-serif;
+}
+
+footer {
+  background-color: #2e5eec;
+  text-align: left;
+  padding: 1rem 0 2rem;
+  margin-top: 3rem;
+}
+
+footer .footer-card {
+  text-align: left;
+  width: 25%;
+  margin: 0 auto;
+  margin-top: 1.5rem;
+}
+
+.footer-card h3 {
+  color: white;
+  display: inline-block;
+  font-size: 700;
+  border-bottom: 1px solid white;
+}
+
+.footer-card p {
+  width: auto;
+  color: white;
+  font-family: 'Quicksand', sans-serif;
+  margin-top: 1.5rem;
+  font-size: 900;
+}
+
+.footer-card a {
+  width: auto;
+  color: white;
+  font-family: 'Quicksand', sans-serif;
+  margin-top: 1.5rem;
+  font-size: 900;
+}
+
+footer .credits {
+  font-size: 1rem;
+  color: white;
+  text-align: center;
+}
+
+@media screen and (max-width: 991.98px) {
+  .wrapper {
+      width: 90%;
+  }
+
+  section {
+      display: block;
+  }
+
+  section img {
+      display: block;
+      width: 100%;
+      height: auto;
+  }
+
+  .kartu-tutor {
+      width: 50%;
+  }
+
+  .kartu-partner {
+      width: 50%;
+  }
+}
