@@ -5,6 +5,7 @@
             <table class="table table-bordered">
                 
                 <tr>
+                    <th>id</th>
                     <th>Name</th>
                     <th>Email</th>
                     <th>Username</th>
@@ -18,6 +19,7 @@
                 <tbody>
                     @foreach ($users as $user)
                         <tr>
+                            <td>{{ $user->id }}</td>
                             <td>{{ $user->name }}</td>
                             <td>{{ $user->email }}</td>
                             <td>{{ $user->username}}</td>
@@ -34,7 +36,12 @@
                                     <button type="submit" class="btn btn-danger">Delete</button>
                                 </form> --}}
                             </td>
+
                         </tr>
                     @endforeach
+                    <form action="{{route('adduser')}}" >
+                        <button type="submit" class="btn btn-primary">Tambah user</button>
+
+                    </form>
                 </tbody>
             </table>

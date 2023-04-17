@@ -34,6 +34,12 @@ Route::middleware(['auth', 'user-role:3'])->group(function(){
 });
 
 //Feature menambahkan user dan melihat user
-// Route::get('/manageuser', 'App\Http\Controllers\UserController@index')->name('manageuser');
-// Route::get('/admindashboard/saveuser', 'App\Http\Controllers\UserController@store')->name('saveuser');
+Route::get('/manageuser', 'App\Http\Controllers\UserController@index')->name('manageuser');
+
+//Route untuk get and post buat tambah user
+Route::get('/adduser', function(){
+    return view('adminroute.adduserpage');
+})->name('adduser');
+
+Route::post('/admindashboard/saveuser', 'App\Http\Controllers\UserController@store')->name('saveuser');
 
