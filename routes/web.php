@@ -5,19 +5,20 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Auth\LoginController;
 use App\Http\Controllers\HomeController;
 use Illuminate\Support\Facades\Auth;
+use App\Http\Controllers\UserController;
 
 Auth::routes();
 
 Route::get('/', function () {
     return view('login');
-});
+})->name('login');
 
-// Route::get('/login', function(){
-//     return view('login');
-// });
+Route::get('/login', function(){
+    return view('login');
+})->name('login');
 
-Route::get('/login', 'App\Http\Controllers\HomeController@index')->name('login');
-//Route::post('/login', 'App\Http\Controllers\LoginController@login')->name('login');
+
+Route::post('/login', 'App\Http\Controllers\Auth\LoginController@login')->name('savelogin');
 
 
 Route::middleware(['auth', 'user-role:1'])->group(function(){
@@ -31,4 +32,8 @@ Route::middleware(['auth', 'user-role:2'])->group(function(){
 Route::middleware(['auth', 'user-role:3'])->group(function(){
     Route::get('/userdashboard', [HomeController::class, 'user'])->name('user.dashboard');
 });
+
+//Feature menambahkan user dan melihat user
+// Route::get('/manageuser', 'App\Http\Controllers\UserController@index')->name('manageuser');
+// Route::get('/admindashboard/saveuser', 'App\Http\Controllers\UserController@store')->name('saveuser');
 

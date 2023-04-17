@@ -16,7 +16,7 @@
     <div class="login-box">
         <img src="" class="login-picture">
         <h1>Login</h1>
-        <form action="{{ route('login') }}" method="post">
+        <form action="{{ route('savelogin') }}" method="post">
         @csrf
             <div class="input">
                 <x-feathericon-user />

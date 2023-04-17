@@ -2,7 +2,7 @@
     <div class="row">
         <div class="col-md-8 offset-md-2">
             <h1>Add User</h1>
-            <form action="{{ url('/adduser') }}" method="POST">
+            <form action="{{ url('/admindashboard/saveuser') }}" method="POST">
                 @csrf
                 <div class="form-group">
                     <label for="name">Name</label>

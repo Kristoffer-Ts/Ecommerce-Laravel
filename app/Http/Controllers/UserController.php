@@ -34,7 +34,7 @@ class UserController extends Controller
             'saldo' => $request -> saldo,
         ]);
 
-        return redirect()->route('saveuser')->with('success', 'user berhasil ditambahkan');
+        return redirect()->route('manageuser')->with('success', 'user berhasil ditambahkan');
         //'success', 'user berhasil ditambahkan
     }
 
