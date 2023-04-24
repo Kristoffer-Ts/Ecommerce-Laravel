@@ -28,20 +28,23 @@
                             <td>{{ $user->shop_name}}</td>
                             <td>{{ $user->saldo}}</td>
                             <td>{{ $user->id_role}}</td>
+                            
                             <td>
-                                
-                                {{-- <form action="{{route('deleteuser', $users->id)}}" method="POST" style="display: inline-block;">
+                                <form action="{{route('deleteuser', $user->id)}}" method="POST" onsubmit="return confirm('Apakah yakin mau menghapus user?')"  style="display: inline-block;">
+                                    @method('delete')
                                     @csrf
-                                    @method('DELETE')
                                     <button type="submit" class="btn btn-danger">Delete</button>
-                                </form> --}}
+                                </form>
                             </td>
 
                         </tr>
+
                     @endforeach
+
                     <form action="{{route('adduser')}}" >
                         <button type="submit" class="btn btn-primary">Tambah user</button>
 
                     </form>
+
                 </tbody>
             </table>

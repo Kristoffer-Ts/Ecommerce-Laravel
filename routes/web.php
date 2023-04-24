@@ -42,4 +42,4 @@ Route::get('/adduser', function(){
 })->name('adduser');
 
 Route::post('/admindashboard/saveuser', 'App\Http\Controllers\UserController@store')->name('saveuser');
-
+Route::delete('/adminroute.viewuserpage{user}', 'App\Http\Controllers\UserController@destroy')->name('deleteuser');

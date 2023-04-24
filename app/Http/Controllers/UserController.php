@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\user;
+use \Illuminate\Support\Facades\DB;
 use Illuminate\Foundation\Auth\User as AuthUser;
 use Illuminate\Http\Request;
 
@@ -11,6 +12,7 @@ class UserController extends Controller
     /**
      * Display a listing of the resource.
      */
+    
     public function index()
     {
         $users = user::all();
@@ -59,9 +61,10 @@ class UserController extends Controller
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(user $user)
+    public function destroy($id)
     {
+        $user = user::find($id);
         $user->delete();
-        return view("adminroute.viewuserpage")->with('success', 'Data berhasil dihapus');
-    }
+        return redirect('manageuser');
+    }       
 }
