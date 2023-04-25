@@ -33,13 +33,17 @@ Route::middleware(['auth', 'user-role:3'])->group(function(){
     Route::get('/userdashboard', [HomeController::class, 'user'])->name('user.dashboard');
 });
 
+
+//Route Admin
 //Feature menambahkan user dan melihat user
-Route::get('/manageuser', 'App\Http\Controllers\UserController@index')->name('manageuser');
+Route::get('/manageuser', 'App\Http\Controllers\UserController@index')->middleware(['auth', 'user-role:1'])->name('manageuser');
 
 //Route untuk get and post buat tambah user
 Route::get('/adduser', function(){
     return view('adminroute.adduserpage');
-})->name('adduser');
+})->middleware(['auth', 'user-role:1']) ->name('adduser');
 
 Route::post('/admindashboard/saveuser', 'App\Http\Controllers\UserController@store')->name('saveuser');
-Route::delete('/adminroute.viewuserpage{user}', 'App\Http\Controllers\UserController@destroy')->name('deleteuser');
+
+//Route Delete
+Route::delete('/adminroute.viewuserpage{user}', 'App\Http\Controllers\UserController@destroy')->middleware(['auth', 'user-role:1']) ->name('deleteuser');
