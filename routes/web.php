@@ -2,6 +2,7 @@
 
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\Productcontroller;
 use App\Http\Controllers\Auth\LoginController;
 use App\Http\Controllers\HomeController;
 use Illuminate\Support\Facades\Auth;
@@ -30,7 +31,7 @@ Route::middleware(['auth', 'user-role:2'])->group(function(){
 });
 
 Route::middleware(['auth', 'user-role:3'])->group(function(){
-    Route::get('/userdashboard', [HomeController::class, 'user'])->name('user.dashboard');
+    Route::get('/userdashboard', [Productcontroller::class, 'index'])->name('user.dashboard');
 });
 
 

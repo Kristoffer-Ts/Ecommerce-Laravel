@@ -46,8 +46,7 @@ class UserController extends Controller
      */
     public function show(user $user)
     {
-        // $users = user::all();
-        // return view('adminroute.viewuserpage', compact('users'));
+    
     }
 
     /**

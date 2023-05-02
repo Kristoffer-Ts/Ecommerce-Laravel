@@ -42,7 +42,7 @@ class HomeController extends Controller
     //userdashboard
     public function user()
     {
-        return view ('userdashboard');
+        
     }
 
     /**

@@ -16,6 +16,10 @@ class Product extends Model
         'id_user',
         'harga',
         'stock',
-        'status_product'
+        'status_product',
+        'description',
+        'photo_path'
+
+
     ];
 }
